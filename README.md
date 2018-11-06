@@ -3,6 +3,8 @@ Iniciació al ROS http://wiki.ros.org/ROS/Tutorials
 
 # 1. Installing and configuring your ROS environment
 
+Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment
+
 En primer lloc clicarem en l'enllaç de *ROS installation instructions* que ens portarà en una nova pestanya on ens donarà a escollir entre el ROS Kinetic o el Melodic, en el meu cas escullo el Melodic. En la següent finestra escollim el nostre sistema operatiu (Ubuntu en el meu cas) i seguirem les instruccions que ens marca:
 
 1: ***sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'***
@@ -12,4 +14,22 @@ En primer lloc clicarem en l'enllaç de *ROS installation instructions* que ens 
 
 3: ***sudo apt update*** per verificar que el Debian està al dia amb les actualitzacions.
 
-4: ***sudo apt install ros-melodic-PACKAGE*** comanda que permet instalar els paquets de ROS melodic que vulguis, simplement canviant la paraula PACKAGE pel nom del paquet. Els paquets disponibles es poden visualitzar amb la comanda *apt search ros-melodic*
+4: ***sudo apt install ros-melodic-PACKAGE*** comanda que permet instalar els paquets de ROS melodic que vulguis, simplement canviant la paraula PACKAGE pel nom del paquet. Els paquets disponibles es poden visualitzar amb la comanda ***apt search ros-melodic***.
+
+5: Abans d'utilitzar ROS, és necessariuna inicialització del rosdep ***sudo rosdep init***, en cas de que requereixi una actualització, previament executarem la comanda ***rosdep update***. Així, serà més fàcil instalar dependencies del sistema per compilar.
+
+6: ***echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc*** per tal de posar a punt l'entorn de treball i que al iniciar una nova shell les variables d'entorn s'adhereixin en el teu bash.
+
+Fins aquí tot el necessari per arrencar ROS i els seus paquets.
+
+- Seguidament, el tutorial ens mostra com crear un espai de treball:
+
+ 1: Creem una carpeta nova en l'arrel ***mkdir -p ~/catkin_ws/src*** i ens hi situem ***cd ~/catkin_ws/***. 
+
+ 2: Executem la comanda ***catkin_make***, necessària per treballar en espais de treball catkin. Aquesta, el primer cop que l'executes et crea diverses carpetes juntament amb un document CMakeLists.txt.
+
+ 3: Dins la carpeta devel, hi ha nous arxius amb terminació .sh i per establir el nou arxiu de .sh's: ***source devel/setup.bash***. Per assegurar-te de que el procés anterior s'ha realitzat correctament ***echo $ROS_PACKAGE_PATH***, hauria de sortir: /home/youruser/catkin_ws/src:/opt/ros/melodic/share
+
+
+# 2. Navigating the ROS filesystem
+
