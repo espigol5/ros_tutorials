@@ -39,8 +39,8 @@ En aquest exercici inspeccionem comandes bàsiques dins el paquet ros-tutorials,
 
 En aquest ens ensenya l'ús de:
 - ***rospack find [package_name]*** per trobar el camí d'on es troba el paquet dins ROS.
-- ***roscd*** per canviar de directori automàticament sense necessitat de posar el camí complert, sempre i quan es tracti d'un arxiu dins de ROS.
-- ***rosls*** per visualitzar el contingut d'un directori, sense necessitat d'estar-hi, sempre i quan es tracti d'un directori dins de ROS.
+- ***roscd*** per canviar de directori on es troba un paquet de ROS automàticament sense necessitat de posar el camí complert.
+- ***rosls*** per visualitzar el contingut d'un paquet de ROS.
 - Ús del tabulador.
 
 # 3 
