@@ -22,14 +22,25 @@ En primer lloc clicarem en l'enllaç de *ROS installation instructions* que ens 
 
 Fins aquí tot el necessari per arrencar ROS i els seus paquets.
 
-- Seguidament, el tutorial ens mostra com crear un espai de treball:
+Seguidament, el tutorial ens mostra com crear un espai de treball:
 
- 1: Creem una carpeta nova en l'arrel ***mkdir -p ~/catkin_ws/src*** i ens hi situem ***cd ~/catkin_ws/***. 
+- Creem una carpeta nova en l'arrel ***mkdir -p ~/catkin_ws/src*** i ens hi situem ***cd ~/catkin_ws/***. 
 
- 2: Executem la comanda ***catkin_make***, necessària per treballar en espais de treball catkin. Aquesta, el primer cop que l'executes et crea diverses carpetes juntament amb un document CMakeLists.txt.
+- Executem la comanda ***catkin_make***, necessària per treballar en espais de treball catkin. Aquesta, el primer cop que l'executes et crea diverses carpetes juntament amb un document CMakeLists.txt.
 
- 3: Dins la carpeta devel, hi ha nous arxius amb terminació .sh i per establir el nou arxiu de .sh's: ***source devel/setup.bash***. Per assegurar-te de que el procés anterior s'ha realitzat correctament ***echo $ROS_PACKAGE_PATH***, hauria de sortir: /home/youruser/catkin_ws/src:/opt/ros/melodic/share
+- Dins la carpeta devel, hi ha nous arxius amb terminació .sh i per establir el nou arxiu de .sh's: ***source devel/setup.bash***. Per assegurar-te de que el procés anterior s'ha realitzat correctament ***echo $ROS_PACKAGE_PATH***, hauria de sortir: /home/youruser/catkin_ws/src:/opt/ros/melodic/share
 
 
 # 2. Navigating the ROS filesystem
 
+Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/NavigatingTheFilesystem
+
+En aquest exercici inspeccionem comandes bàsiques dins el paquet ros-tutorials, que instal·lem amb ***sudo apt-get install ros-melodic-ros-tutorials***
+
+En aquest ens ensenya l'ús de:
+- ***rospack find [package_name]*** per trobar el camí d'on es troba el paquet dins ROS.
+- ***roscd*** per canviar de directori automàticament sense necessitat de posar el camí complert, sempre i quan es tracti d'un arxiu dins de ROS.
+- ***rosls*** per visualitzar el contingut d'un directori, sense necessitat d'estar-hi, sempre i quan es tracti d'un directori dins de ROS.
+- Ús del tabulador.
+
+# 3 
