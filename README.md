@@ -114,3 +114,4 @@ Amb el rosparam podem guardar i manipular informació en el servidor de paràmet
 - ***rosparam get (param_name)***: per obtenir el valor d'un paràmetre.
 - ***rosparam dump (file_name) (namespace)***: per guardar una configuració de paràmetres en un arxiu.
 - ***rosparam load (file_name) (namespace)***: per carregar una configuració de paràmetres d'un arxiu.
+
