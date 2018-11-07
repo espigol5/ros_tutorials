@@ -63,6 +63,54 @@ Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/BuildingPackages
 
 Es defineix com es construeixen projectes amb el catkin en comparació amb el cmake. La comanda s'ha realitzat en exercicis anteriors: ***catkin_make***. Aquesta comanda et genera automàticament les carpetes *devel* i *build*, que es sumen a la carpeta *src* en l'espai de treball de catkin.
 
+# 5 Understanding ROS nodes
 
+Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/UnderstandingNodes
 
+Ens demana instalar un paquet prèviament insatal·lat en l'exercici 2: ***sudo apt-get install ros-melodic-ros-tutorials***.
 
+Ens introdueix el concepte de *Nodes* com a un executable que utilitza ROS per comunicar-se amb altres nodes. Les *Client Libraries* permeten la comunicació entre nodes escrits en diferents llenguatges de programació, com podrien ser *rospy* per la llibreria de python o *roscpp* per la llibreria de c++.
+
+Per treballar amb ROS, la primera tasca a dur a terme és executar el ***roscore*** i deixar la finestra oberta amb el roscore executant-se, mentre obres un altre terminal on treballar.
+
+En aquest segon terminal, es pot executar qualsevol node comprès en un paquet amb la comanda ***rosrun (package_name) (node_name)***. Per observar els nodes que s'estan executant s'utilitza la comanda ***rosnode list***.
+
+# 6 Understanding ROS topics
+
+Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics
+
+En aquest exercici agafem d'exemple un node executat en l'exercici anterior: ***rosrun turtlesim turtlesim_node***, on *turtlesim* és el nom del paquet i *turtlesim_node* el seu node.
+
+A partir d'aquest executem un altre node que ens permetrà moure la tortuga que ens apareix en pantalla amb el primer node: ***tosrun turtlesim turtle_teleop_key***. El que permet que es comuniqui un amb altre és el que anomenem *Topic*.
+
+Per visualitzar els Nodes amb els Topics que els enllacen, executem la comanda ***rosrun rqt_graph rqt_graph***. Amb aquest node, veiem la conexió amb els nodes, quin és el que actua sobre l'altre i com.
+
+Amb ***rostopic echo (topic)*** veiem la informació plubicada en el topic especificat.
+
+Amb ***rostopic list -v*** mostra una llista detallada de topics per publicar i subscriure's al seu tipus.
+
+Amb ***rostopic type (topic)*** veiem el tipus de topic que ens referim. A més, amb ***rosmsg show (el topic type que et doni l'anterior comanda)*** et mostra el tipus de missatge que esta enviant.
+
+Amb ***rostopic pub (topic) (msg_type) (args)*** es publica informació en el topic especificat.
+
+Amb ***rostopic hz (topic)*** ens marca la velocitat amb la que la informació es publicada.
+
+Finalment amb ***rosrum rqt_plot rqt_plot*** s'ens obra una finestra on podrem definir quin topic volem visualitzar i ens dibuixarà una gràfica de cada una de les variables del topic marcat. La visualització del nombre de variables és editable amb els botons + i -.
+
+# 7 Understanding ROS Services and Parameters
+
+Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams
+
+En aquest exercici utilitzem les comandes ***rosservice*** i ***rosparam***. 
+
+- ***rosservice list***: ens mostra els serveis que et permet fer el/s node/s que estan en execució.
+- ***rosservice type (service)***: ens permet saber de quin tipus és el servei que hem seleccionat.
+- ***rosservice call (service) (args)***: per cridar el servei i que es dugui a terme.
+
+Amb el rosparam podem guardar i manipular informació en el servidor de paràmetres de ROS:
+
+- ***rosparam list***: ens mostra els paràmetres que gestiona el/s node/s que estan en execució i que es troben en el servidor de paràmetres de ROS.
+- ***rosparam set (param_name)***: per establir un valor a un paràmetre.
+- ***rosparam get (param_name)***: per obtenir el valor d'un paràmetre.
+- ***rosparam dump (file_name) (namespace)***: per guardar una configuració de paràmetres en un arxiu.
+- ***rosparam load (file_name) (namespace)***: per carregar una configuració de paràmetres d'un arxiu.
