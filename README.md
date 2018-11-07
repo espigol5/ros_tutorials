@@ -115,3 +115,7 @@ Amb el rosparam podem guardar i manipular informació en el servidor de paràmet
 - ***rosparam dump (file_name) (namespace)*** : per guardar una configuració de paràmetres en un arxiu.
 - ***rosparam load (file_name) (namespace)*** : per carregar una configuració de paràmetres d'un arxiu.
 
+# 10 Creating ROS msg and srv
+
+Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv
+
