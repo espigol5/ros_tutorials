@@ -56,3 +56,13 @@ A continuació, ens tornem a col·locar en la carpeta *~/catkin_ws* i executem u
 Amb la comanda ***rospack depends1 beginner_tutorials*** es poden veure les dependències del paquet que hem creat, que es situen en l'arxiu *package.xml*.
 
 En aquest arxiu .xml, hi trobem descripció del paquet i de l'usuari que l'ha creat, llicències i dependències.
+
+# 4 Building a ROS package
+
+Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/BuildingPackages
+
+Es defineix com es construeixen projectes amb el catkin en comparació amb el cmake. La comanda s'ha realitzat en exercicis anteriors: ***catkin_make***. Aquesta comanda et genera automàticament les carpetes *devel* i *build*, que es sumen a la carpeta *src* en l'espai de treball de catkin.
+
+
+
+
