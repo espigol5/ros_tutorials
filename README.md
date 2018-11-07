@@ -119,3 +119,22 @@ Amb el rosparam podem guardar i manipular informació en el servidor de paràmet
 
 Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv
 
+S'introdueixen conceptes de msg i srv:
+- msg: són arxius de text que descriuen els camps d'un missatge de ROS. S'utilitzen per generar missatges en diferents llenguatges.
+- srv: arxius que descriuen un servei. Estan composats de dos parts: una petició i una resposta.
+
+Es crea un *msg* en el repositori de beginner_tutorials i es mostra com visualitzar-lo amb la comanda ***rosmsg show (message type)***. Així mateix, es crea un *srv* i es mostra també com visualitzar el servei amb ***rossrv show (service type)***.
+
+En tenir nous msg, es necessari un ***catkin_make install***, per tal de que es generi un codi perquè els msg tinguin suport en tots els llenguatges.
+
+# 11 Writing a simple Publisher and Subscriber (C++)
+
+Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29
+
+Es crea un *publisher* i un *subscriber* en llenguatge C++ i es suprimeix i afegeix contingut en el *CMakeLists.txt* tal com marca el tutorial. Per últim, es construeixen conjuntament sense cap error de compilació.
+
+# 12 Writing a simple Publisher and Subscriber (Python)
+
+Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29
+
+Es creen dos arxius txt en els quals introduïm el codi com ens mostra el tutorial, els quals esdevindràn el *publisher* i el *subscriber*. Per últim, es construeixen conjuntament sense cap error de compilació.
