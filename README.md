@@ -103,15 +103,15 @@ Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/UnderstandingService
 
 En aquest exercici utilitzem les comandes ***rosservice*** i ***rosparam***. 
 
-- ***rosservice list***: ens mostra els serveis que et permet fer el/s node/s que estan en execució.
-- ***rosservice type(service)*** : ens permet saber de quin tipus és el servei que hem seleccionat.
-- ***rosservice call(service)(args)***: per cridar el servei i que es dugui a terme.
+- ***rosservice list*** : ens mostra els serveis que et permet fer el/s node/s que estan en execució.
+- ***rosservice type (service)*** : ens permet saber de quin tipus és el servei que hem seleccionat.
+- ***rosservice call (service) (args)*** : per cridar el servei i que es dugui a terme.
 
 Amb el rosparam podem guardar i manipular informació en el servidor de paràmetres de ROS:
 
-- ***rosparam list***: ens mostra els paràmetres que gestiona el/s node/s que estan en execució i que es troben en el servidor de paràmetres de ROS.
-- ***rosparam set(param_name)***: per establir un valor a un paràmetre.
-- ***rosparam get(param_name)***: per obtenir el valor d'un paràmetre.
-- ***rosparam dump(file_name)(namespace)***: per guardar una configuració de paràmetres en un arxiu.
-- ***rosparam load(file_name)(namespace)***: per carregar una configuració de paràmetres d'un arxiu.
+- ***rosparam list*** : ens mostra els paràmetres que gestiona el/s node/s que estan en execució i que es troben en el servidor de paràmetres de ROS.
+- ***rosparam set (param_name)*** : per establir un valor a un paràmetre.
+- ***rosparam get (param_name)*** : per obtenir el valor d'un paràmetre.
+- ***rosparam dump (file_name) (namespace)*** : per guardar una configuració de paràmetres en un arxiu.
+- ***rosparam load (file_name) (namespace)*** : per carregar una configuració de paràmetres d'un arxiu.
 
