@@ -43,4 +43,16 @@ En aquest ens ensenya l'ús de:
 - ***rosls*** per visualitzar el contingut d'un paquet de ROS.
 - Ús del tabulador.
 
-# 3 
+# 3 Creating a ROS package
+
+Es segueix el tutorial de http://wiki.ros.org/ROS/Tutorials/CreatingPackage
+
+Et defineix el concepte de catkin Package, així com la seva estructura, que com a mínim ha de contenir un *CMakeLists.txt* i un *package.xml*.
+
+Es crea un directori de catkin previament en l'exercici 1 amb la comanda ***mkdir -p ~/catkin_ws/src*** i ens hi situem amb ***cd ~/catkin_ws/***. En aquest directori es crea un paquet anomenat *beginner_tutorials* amb la comanda ***catkin_create_pkg beginner_tutorials std_msgs rospy roscpp***.
+
+A continuació, ens tornem a col·locar en la carpeta *~/catkin_ws* i executem un ***catkin_make***, per fer un build en el nostre espai de treball de catkin. Per afegir l'espai de treball en l'entorn de ROS, ***. ~/catkin_ws/devel/setup.bash***.
+
+Amb la comanda ***rospack depends1 beginner_tutorials*** es poden veure les dependències del paquet que hem creat, que es situen en l'arxiu *package.xml*.
+
+En aquest arxiu .xml, hi trobem descripció del paquet i de l'usuari que l'ha creat, llicències i dependències.
